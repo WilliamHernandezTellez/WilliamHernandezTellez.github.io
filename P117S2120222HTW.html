@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        body{
+            font-size: 28px;
+        }
+        input[type=button]{
+            font-size: 28px;
+            color:red;
+        }
+        input[type=number]{
+            font-size: 28px;
+
+        }
+    </style>
+
+    <script>
+        function sumar(){
+            let numero1 = document.getElementById("num1").value;
+            let numero2 = document.getElementById("num2").value;
+            let resul = parseInt(numero1) + parseInt(numero2);
+            let cadena = "El resultado de la suma es " + resul;
+            document.getElementById("resultado").innerHTML=cadena;
+        }
+
+        function resta(){
+            let resul = parseInt(document.getElementById("num1").value) - parseInt(document.getElementById("num2").value);
+            let cadena = "El resultado de la resta es " + resul;
+            document.getElementById("resultado").innerHTML=cadena;
+        }
+        function multiplicacion(){
+            let resul = parseInt(document.getElementById("num1").value) * parseInt(document.getElementById("num2").value);
+            let cadena = "El resultado de la multiplicacion es " + resul;
+            document.getElementById("resultado").innerHTML=cadena;
+        }
+        function division(){
+            let resul = parseInt(document.getElementById("num1").value) / parseInt(document.getElementById("num2").value);
+            let cadena = "El resultado de la division es " + resul;
+            document.getElementById("resultado").innerHTML=cadena;
+        }
+    </script>
+</head>
+<body>
+    <label for="num1">Ingresa el primer valor</label>
+    <input type="number" name="num1" id="num1"> <br>
+    <label for="num2">Ingresa el segundo numero</label>
+    <input type="number" name="num2" id="num2"><br>
+    <input type="button" value="Calcular suma" onclick="sumar();"> <br>
+    <input type="button" value="Calcular resta" onclick="resta();"> <br>
+    <input type="button" value="Calcular multiplicacion" onclick="multiplicacion();"> <br>
+    <input type="button" value="Calcular division" onclick="division();"><br>
+    <div id="resultado">Aqui ira el resultado </div><br>
+    
+</body>
+</html>
